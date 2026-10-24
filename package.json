@@ -1,0 +1,25 @@
+{
+  "name": "claude-api-101",
+  "version": "1.0.0",
+  "description": "Building with the Claude API | courseera",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paritosh-yadav/Claude-API-101.git"
+  },
+  "author": "Paritosh Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paritosh-yadav/Claude-API-101/issues"
+  },
+  "homepage": "https://github.com/paritosh-yadav/Claude-API-101#readme",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.3.0",
+    "@openrouter/sdk": "^1.5.7",
+    "dotenv": "^18.0.9"
+  }
+}
