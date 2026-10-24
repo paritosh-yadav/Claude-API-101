@@ -4,11 +4,12 @@ const addUserMessage = (messages, text) => {
 const addAssistantMessage = (messages, text) => {
   messages.push({ role: "assistant", content: text });
 };
-const chat = async (openrouter, messages) => {
+const chat = async (openrouter, messages, instructions) => {
   // Stream the response to get reasoning tokens in usage
   const stream = await openrouter.chat.send({
     chatRequest: {
       model: "nvidia/nemotron-3.5-super-vl:free",
+      instructions: instructions || "You are a helpful assistant.",
       messages: messages,
       max_tokens: 1024,
       stream: true,
