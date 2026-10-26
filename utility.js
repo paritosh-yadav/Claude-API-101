@@ -34,4 +34,13 @@ const chat = async (openrouter, messages, instructions) => {
 
   return response;
 };
-export { addUserMessage, addAssistantMessage, chat };
+const stream = async (openrouter, message) => {
+  const result = openrouter.callModel({
+    model: "nvidia/nemotron-3.5-super-vl:free",
+    input: message
+  });
+  for await (const delta of result.getTextStream()) {
+    process.stdout.write(delta);
+  }
+};
+export { addUserMessage, addAssistantMessage, chat, stream };
